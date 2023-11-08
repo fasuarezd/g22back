@@ -28,4 +28,4 @@ jobs:
     - run: npm ci
     - run: |
         touch .env
-        echo "${{secrets.PROD_ENV_FILE}}" > .env
+        sudo echo "${{secrets.PROD_ENV_FILE}}" > .env
