@@ -17,6 +17,11 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/tareas', require('./routes/tareasRoutes'))
 app.use('/api/users', require('./routes/usersRoutes'))
+app.use('/api/products', (req, res) => {
+    return res.status(200).json({
+        message: 'Nueva funcionalidad agregada'
+    })
+})
 
 //test
 
